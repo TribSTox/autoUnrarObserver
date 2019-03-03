@@ -5,8 +5,12 @@ Directory observer for automatically unrar files
 ## Getting Started
 
 * Install dependencies and launch the script with argument(s):
-- needed : path to observe
-- optional : path where unrar (current observed by default)
+```
+needed : path to observe
+```
+```
+optional : path where unrar (current observed by default)
+```
 
 ### Prerequisites
 
