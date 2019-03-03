@@ -6,10 +6,10 @@ Directory observer for automatically unrar files
 
 * Install dependencies and launch the script with argument(s):
 ```
-needed : path to observe
+arg1, needed : path to observe
 ```
 ```
-optional : path where unrar (current observed by default)
+arg2, optional : path where unrar (current observed by default)
 ```
 
 ### Prerequisites
@@ -17,7 +17,7 @@ optional : path where unrar (current observed by default)
 * Python 2.7
 * Pip
 
-```
+```sh
 pip install watchdog pyunpack
 ```
 
