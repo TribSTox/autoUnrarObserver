@@ -1,5 +1,7 @@
 # Automatic unrar observer
 
+Directory observer for automatically unrar files
+
 ## Getting Started
 
 Install dependencies and launch the script with argument(s):
