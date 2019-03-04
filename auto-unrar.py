@@ -5,7 +5,7 @@
 # optional arg : path to unrar
 # dependencies : pip install watchdog pyunpack
 
-import sys
+import sys, os
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
  
