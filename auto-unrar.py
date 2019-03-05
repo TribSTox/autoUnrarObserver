@@ -26,7 +26,7 @@ class UnrarHandler(FileSystemEventHandler):
             if pathWhereUnrar:
                 filePathWhereUnrar = pathWhereUnrar
             else:
-                filePathWhereUnrar = os.path.dirname(path)
+                filePathWhereUnrar = os.path.dirname(event.src_path)
             Archive(event.src_path).extractall(filePathWhereUnrar)
 
 observer = Observer()
