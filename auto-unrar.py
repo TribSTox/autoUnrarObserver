@@ -23,7 +23,6 @@ class UnrarHandler(FileSystemEventHandler):
         if ext[1:] == "rar":
             print("Decompression du fichier %s !" % event.src_path)
             from pyunpack import Archive
-            ext = os.path.splitext(event.src_path)
             if pathWhereUnrar:
                 filePathWhereUnrar = pathWhereUnrar
             else:
