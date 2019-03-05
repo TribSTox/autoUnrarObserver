@@ -5,7 +5,7 @@
 # optional arg : path to unrar
 # dependencies : pip install watchdog pyunpack
 
-import sys, os
+import sys, os, time
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
  
@@ -15,10 +15,6 @@ try:
 except:
     pathWhereUnrar = sys.argv[1]
  
-import time
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
-
 class MonHandler(FileSystemEventHandler):
 
     # appelée à chaque fois qu'un fichier est créé
