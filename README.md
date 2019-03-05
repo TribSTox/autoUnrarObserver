@@ -18,7 +18,7 @@ arg2, optional : path where unrar (current observed by default)
 * Pip
 
 ```sh
-pip install watchdog pyunpack
+pip install watchdog pyunpack patool
 ```
 
 ### Launching
