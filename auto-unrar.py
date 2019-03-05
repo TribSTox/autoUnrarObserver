@@ -13,7 +13,7 @@ pathToObserve = sys.argv[1]
 try:
     pathWhereUnrar = sys.argv[2]
 except:
-    pathWhereUnrar = sys.argv[1]
+    pathWhereUnrar = False
  
 class UnrarHandler(FileSystemEventHandler):
 
@@ -23,7 +23,12 @@ class UnrarHandler(FileSystemEventHandler):
         if ext[1:] == "rar":
             print("Decompression du fichier %s !" % event.src_path)
             from pyunpack import Archive
-            Archive(event.src_path).extractall(pathWhereUnrar)
+            ext = os.path.splitext(event.src_path)
+            if pathWhereUnrar:
+                filePathWhereUnrar = pathWhereUnrar
+            else:
+                filePathWhereUnrar = os.path.dirname(path)
+            Archive(event.src_path).extractall(filePathWhereUnrar)
 
 observer = Observer()
 # Surveiller récursivement tous les événements du dossier fourni en argument
