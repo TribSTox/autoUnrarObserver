@@ -15,7 +15,7 @@ try:
 except:
     pathWhereUnrar = sys.argv[1]
  
-class MonHandler(FileSystemEventHandler):
+class UnrarHandler(FileSystemEventHandler):
 
     # appelée à chaque fois qu'un fichier est créé
     def on_created(self, event):
@@ -28,7 +28,7 @@ class MonHandler(FileSystemEventHandler):
 observer = Observer()
 # Surveiller récursivement tous les événements du dossier fourni en argument
 # et appeler les méthodes de RarHandler quand un fichier est créé
-observer.schedule(MonHandler(), path=pathToObserve, recursive=True)
+observer.schedule(UnrarHandler(), path=pathToObserve, recursive=True)
 
 
 observer.start()
